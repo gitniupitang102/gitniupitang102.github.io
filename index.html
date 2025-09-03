@@ -3,10 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Personal Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        h1 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .code-analysis {
+            background: #f8f9fa;
+            border-left: 4px solid #2575fc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .code-analysis h2 {
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+        
+        .issues-list {
+            list-style-type: none;
+        }
+        
+        .issues-list li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .fixed-code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+        }
+        
+        .tag {
+            color: #569cd6;
+        }
+        
+        .attribute {
+            color: #9cdcfe;
+        }
+        
+        .value {
+            color: #ce9178;
+        }
+        
+        .comment {
+            color: #6a9955;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>My Blog</h1>
-    <p>Hello, I'm NiuPiTang, welcome to my blog site</p>
+    <div class="container">
+        <header>
+            <h1>My Blog</h1>
+            <p class="intro">Hello, I'm NiuPiTang, welcome to my blog site</p>
+        </header>
+        
+        <section class="code-analysis">
+            <h2>Original Code Issues</h2>
+            <p>The HTML code you provided had several issues that needed fixing:</p>
+            <ul class="issues-list">
+                <li>❌ <strong>Incorrect DOCTYPE</strong>: <code>&lt;!DOCTYP Ehtml&gt;</code> should be <code>&lt;!DOCTYPE html&gt;</code></li>
+                <li>❌ <strong>Character encoding error</strong>: <code>uTF-8</code> should be <code>UTF-8</code></li>
+                <li>❌ <strong>Viewport meta tag issue</strong>: Missing space and incorrect value <code>1.o</code></li>
+                <li>❌ <strong>Closing tag error</strong>: <code>&lt;/htm1&gt;</code> should be <code>&lt;/html&gt;</code></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Fixed Code</h2>
+            <p>Here's the corrected version of your HTML code:</p>
+            <div class="fixed-code">
+                <span class="tag">&lt;!DOCTYPE html&gt;</span><br>
+                <span class="tag">&lt;html lang="en"&gt;</span><br>
+                <span class="tag">&lt;head&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Document<span class="tag">&lt;/title&gt;</span><br>
+                <span class="tag">&lt;/head&gt;</span><br>
+                <span class="tag">&lt;body&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>My Blog<span class="tag">&lt;/h1&gt;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>Hello, I'm NiuPiTang, welcome to my blog site<span class="tag">&lt;/p&gt;</span><br>
+                <span class="tag">&lt;/body&gt;</span><br>
+                <span class="tag">&lt;/html&gt;</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>What This Code Does</h2>
+            <p>This is a basic HTML5 webpage that:</p>
+            <ul>
+                <li>Declares the document type as HTML5</li>
+                <li>Sets the language to English</li>
+                <li>Uses UTF-8 character encoding for proper text rendering</li>
+                <li>Configures the viewport for responsive design on mobile devices</li>
+                <li>Displays a heading "My Blog"</li>
+                <li>Shows a welcome message introducing NiuPiTang</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Fixed HTML Code Analysis | Basic Web Development</p>
+    </footer>
 </body>
 </html>
